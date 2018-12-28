@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - वैशाली डायरी</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+    <link href="~/Content/Styles.css" rel="stylesheet" />
+    <link href="~/Content/menu.css" rel="stylesheet" />
+    <link href="~/Content/News_ticker.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="~/Scripts/News_ticker.js"></script>
+</head>
+<body>
+    <header>
+        @*<div class="Top-header">
+                <div class="col-md-10 col-sm-10 col-xs-12">
+                    <ul class="mailCont">
+                        <li><i class="fa fa-phone"></i> +91-83407 63522 / 6200 970 040</li>
+                        <li><i class="fa fa-envelope"></i> info@badalav.in</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12">
+                    <ul class="social_Icon">
+                        <li> <a href="https://www.facebook.com/#" target="_blank"> <i class="fa fa-facebook"></i></a></li>
+                        <li> <a href="https://plus.google.com/#" target="_blank"> <i class="fa fa-google-plus"></i></a></li>
+                        <li> <a href="https://twitter.com/#" target="_blank"> <i class="fa fa-twitter"></i></a></li>
+                        <li> <a href="https://www.linkedin.com/in/#" target="_blank"> <i class="fa fa-linkedin"></i></a></li>
+                        <li> <a href="https://www.instagram.com/#" target="_blank"> <i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>*@
+        <div class="Midile_Header">
+            <div class="row">
+                <div class="container">
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="logo">
+                            <a href="#"><img src="~/Content/images/VaishaliDayari_Logo.png" class="img-responsive" /></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="Header_TxtCont">
+                            <h2>वैशाली डायरी</h2>
+                        </div>
+                    </div>
+                    @*<div class="col-md-5 col-sm-5 col-xs-12">
+                            <div class="Header_TxtCont">
+                                <form class="Search" action="/action_page.php">
+                                    <input type="text" placeholder="Search products & brands.." name="search">
+                                    <button type="submit"><i class="fa fa-search"></i> Search</button>
+                                </form>
+                            </div>
+                        </div>*@
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <ul class="social_Icon">
+                            <li>
+                                <a href="https://www.facebook.com/#" target="_blank"> <i class="fa fa-facebook"></i></a>
+                                <a href="https://plus.google.com/#" target="_blank"> <i class="fa fa-google-plus"></i></a>
+                                <a href="https://twitter.com/#" target="_blank"> <i class="fa fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/in/#" target="_blank"> <i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/#" target="_blank"> <i class="fa fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                        <ul class="mailCont">
+                            <li><span>RNI Ref No. - 1325847</span></li>
+                            <li><span>Title Code - BIHHIH11817</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Bottum_Header">
+            <div class="affix" data-spy="affix" data-offset-top="197">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <div class="logo">
+                                <a href="#"><img src="~/Content/images/VaishaliDayari_Logo1.png" class="img-responsive" /></a>
+                            </div>
+                            <span style="font-size:30px;cursor:pointer;color: #fff;padding: 5px 15px;" onclick="openNav()">&#9776;</span>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <div class="Header_TxtCont">
+                                <form class="Search" action="/action_page.php">
+                                    <input type="text" placeholder="Search products & brands.." name="search">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <div class="CartSign">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="#">E-paper</a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div id="mySidenav" class="sidenav">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <div class="logo">
+                                <a href="#"><img src="~/Content/images/VaishaliDayari_Logo1.png" class="img-responsive" /></a>
+                            </div>
+                            <hr />
+                            <div class="navbar navbar-inverse">
+                                <div>
+                                    @*<div class="navbar-header">
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+                                        <div class="navbar-collapse collapse">*@
+                                    <div class="navbar-collapse">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="index.html">मुखपृष्ठ</a></li>
+                                            <li><a href="#">बिहार</a></li>
+                                            <li><a href="#">वैशाली</a></li>
+                                            <li><a href="#">ग्रेटर पटना</a></li>
+                                            <li><a href="#">मनोरंजन</a></li>
+                                            <li><a href="#">खेल</a></li>
+                                            <li><a href="#">क्रिकेट</a></li>
+                                            <li><a href="#">पंचांग</a></li>
+                                            <li><a href="#">उद्धोग</a></li>
+                                            <li><a href="#">रोजगार</a></li>
+                                            <li><a href="#">स्वास्थ्य</a></li>
+                                            <li><a href="#">सुझाव</a></li>
+                                            <li><a href="#">क्राइम</a></li>
+                                            <li><a href="#">अनोखी</a></li>
+                                            <li><a href="#">ताजखबरें</a></li>
+                                            <li><a href="#">बड़ी खबरें</a></li>
+                                            <li><a href="#">डायरी विशेष</a></li>
+                                            <li><a href="#">शिक्षा</a></li>
+                                            <li><a href="#">प्रतियोगिता</a></li>
+                                            <li><a href="#">धर्म</a></li>
+                                            <li><a href="#">साहित्य</a></li>
+                                            <li><a href="#">दिल्ली</a></li>
+                                            <li><a href="#">उत्तर प्रदेश</a></li>
+                                            <li><a href="#">झारखंड</a></li>
+                                            <li><a href="#">विदेश</a></li>
+                                            <li><a href="#">देश</a></li>
+                                            <li><a href="#">बॉलीवुड</a></li>
+                                            <li><a href="#">हॉलीवुड</a></li>
+                                            <li><a href="#">भोजपुरी लोकमंच</a></li>
+                                            <li><a href="#">खाना खजाना</a></li>
+                                            <li><a href="#">फोटो गैलरी</a></li>
+                                            <li><a href="#">टॉप 100</a></li>
+                                            <li><a href="#">जीवन मंत्र</a></li>
+                                            <li><a href="#">अपना शहर</a></li>
+                                            <li><a href="#">ई-पेपर</a></li>
+                                            <li><a href="#">अहान न्यूज़</a></li>
+                                            <li><a href="#">भारत नवनिर्माण</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="ticker-container">
+        <div class="ticker-caption">
+            <p>Breaking News</p>
+        </div>
+        <ul>
+            <div>
+                <li><span> <a href="#">बिदूपुर:स्थानीय बुद्धिजीवियों,राजनीतिक दल कर रहे समझौते की प्रयास।</a></span></li>
+            </div>
+            <div>
+                <li><span> <a href="#">बिदूपुर:अपराध की योजना बना रहे दो अपराधी गिरफ्तार।</a></span></li>
+            </div>
+            <div>
+                <li><span> <a href="#">जनता-जनार्दन के स्वास्थ्य लाभ के लिए आयूर्वेद एवं प्राकृतिक चिकित्सा का केंद्र खुला।</a></span></li>
+            </div>
+            <div>
+                <li><span> <a href="#">पितृदेव शिरोमणि व ज्योतिष वास्तु आयुर्वेद भूषण सम्मान मिला!</a></span></li>
+            </div>
+            <div>
+                <li><span> <a href="#">प्रोफेसर अनिरुद्ध प्रसाद उर्फ एपी दास के असामयिक निधन पर समाज को अद्वितीय क्षति</a></span></li>
+            </div>
+        </ul>
+    </div>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>*@
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+       
+    </div>
+    <footer>
+        <p style="font-family:Arial;">Copy Right <span class="glyphicon glyphicon-copyright-mark"><span style="font-family:Arial;"> 2018-2023 वैशाली डायरी</span></span></p>
+        <div class="Fixed_RghtCont">
+            <p style="font-family:Arial;">Presented By :<a href="http://codelovertechnology.com/" target="_blank"> CodeLover Technology</a></p>
+        </div>
+    </footer>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
